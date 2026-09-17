@@ -90,7 +90,7 @@ def main():
                 # 4. Upload hasil ke Google Drive
                 metadata = {
                     "name": f"{row_id}_final.mp4",
-                    "parents": [os.environ["12ynhDl-NHdwjFlYdR9e73rkF5qryMl1Q"]],
+                    "parents": [os.environ["DRIVE_FOLDER_ID"]],
                 }
                 media = MediaFileUpload(final_path, mimetype="video/mp4")
                 uploaded = drive_service.files().create(
